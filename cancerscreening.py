@@ -17,7 +17,7 @@ def lung_cancer():
         lung_cancer_percent += 8
     else:
         pass
-    print("Your overall chance of getting lung cancer is", lung_cancer_percent, "percent.")
+    print("Your overall chance of getting lung cancer is", lung_cancer_percent, "percent.\n")
     print("Lung cancer is more prevalent in people 65 or older.\nSome tips to reduce your risk are:\n- quit smoking and reduce your exposure to second hand smoke\n- eat a diet of healthy fruits and veggies\n- avoid carcinogens.")
 lung_cancer()
 
