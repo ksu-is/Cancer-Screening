@@ -8,5 +8,7 @@
 
 **Sprint 2**
 - [x] added greeting for initial code.
-- [ ] research statistics for cancers.
-- [ ] code seperate functions for cancers to be sure they work before combining them.
+- [x] 6 commits per person.
+- [ ] research statistics for cancers. (started)
+- [ ] code seperate functions for cancers to be sure they work before combining them. (started)
+- [ ] begin coding the website with flask? want to have all reasearch done and working before shifting focus
