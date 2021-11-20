@@ -9,3 +9,4 @@
 **Sprint 2**
 - [x] added greeting for initial code.
 - [ ] research statistics for cancers.
+- [ ] code seperate functions for cancers to be sure they work before combining them.
