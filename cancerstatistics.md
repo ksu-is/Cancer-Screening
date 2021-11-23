@@ -1,3 +1,4 @@
+
 Lung cancer: 
     If smoker: 15 - 30% chance of getting lung cancer
     If constant exposure to radon: 
