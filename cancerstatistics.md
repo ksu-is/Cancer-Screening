@@ -1,3 +1,4 @@
+The four most common cancers in America are Breast, Lung, Colorectal and Prostate cancers. 
 
 Lung cancer: 
     If smoker: 15 - 30% chance of getting lung cancer
@@ -24,3 +25,14 @@ initiate overall varriable as 0.00 to account for decimals in later calculations
     BRACA 1 gene: 72% overall(will need to override the if female/male)
     BRACA 2 gene: 69% overall(will need to override the if female/male)
     If have 2 or more alcoholic drinks a day: add .5%
+
+Prostate cancer:
+    Male only
+    Overall 12.5 % will get it
+    runs in family: double overall risk
+
+Colorectal Cancer:
+    male: 4.3
+    female: 4.0
+    if in family, 5 - 15% (avg 10%)
+    
