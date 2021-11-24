@@ -9,7 +9,7 @@ radon = input("Have you had constant exposure to radon (y or n) choose no if uns
 in_fam_breast = input("Does breast cancer run in your family (y or n): ")
 braca = input("Do you have the BRACA 1 or 2 gene (please enter 1, 2 or n for no): ")
 alcohol = input("Do you drink more than 2 alcoholic drinks a day (y or n): ")
-
+in_fam = input( )
 print("Thank you,", name, "here are your results: \n")
 
 
