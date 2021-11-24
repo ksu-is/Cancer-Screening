@@ -1,15 +1,15 @@
 #cancer questionaire
-print("Hello and welcome to my Cancer Screening tool.")
+print("Hello and welcome to my Cancer Screening tool. In this tool, we will calculate your risk for getting the four most prevalent cancers in America:\nLung\nBreast\nProstate\nColorectal\n")
 name = input("May I get your name please: ")
 age = input("How old are you: ")
 male_female = input("What gender were you assigned at birth (male or female): ")
+in_fam = input("Do any the above cancers run in your family?\nIf yes, please specify which ones: " )
 smoker = input("Are you a smoker (y or n): ")
-in_fam_lung = input("Does lung cancer run in your family (y or n): ")
+#in_fam_lung = input("Does lung cancer run in your family (y or n): ")
 radon = input("Have you had constant exposure to radon (y or n) choose no if unsure: ")
-in_fam_breast = input("Does breast cancer run in your family (y or n): ")
+#in_fam_breast = input("Does breast cancer run in your family (y or n): ")
 braca = input("Do you have the BRACA 1 or 2 gene (please enter 1, 2 or n for no): ")
 alcohol = input("Do you drink more than 2 alcoholic drinks a day (y or n): ")
-in_fam = input( )
 print("Thank you,", name, "here are your results: \n")
 
 
@@ -23,7 +23,7 @@ def lung_cancer():
         lung_cancer_percent += 20
     else:
        lung_cancer_percent += 10
-    if in_fam_lung == "y":
+    if "lung" in in_fam:
         lung_cancer_percent += 8
     else:
         pass
@@ -47,7 +47,7 @@ def breast_cancer():
     else:
         breast_cancer_percent += 1.00
  #   If breast cancer runs in family: 5 - 10%
-    if in_fam_breast == "y":
+    if "breast" in in_fam:
         breast_cancer_percent += 10.00
     else:
         pass
@@ -73,8 +73,21 @@ def breast_cancer():
     print("Your overall chance of getting breast cancer is", breast_cancer_percent, "percent.\n")
 #breast_cancer()
 
+def prostate_cancer():
+    prostate_cancer_percent = 0.0
+    if male_female == "male":
+        prostate_cancer_percent += 12.5
+        if "prostate" in in_fam:
+            prostate_cancer_percent += 12.5
+        else:
+            pass
+    else:
+        pass
+    print("Your overall chance of getting prostate cancer is", prostate_cancer_percent, "percent.\n")
+
 def overall_cancer():
     lung_cancer()
     breast_cancer()
+    prostate_cancer()
 
 overall_cancer()
