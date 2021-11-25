@@ -1,7 +1,7 @@
 #cancer questionaire
 print("Hello and welcome to my Cancer Screening tool. In this tool, we will calculate your risk for getting the 4 most prevalent cancers in America:\nLung\nBreast\nProstate\nColorectal\n")
 name = input("May I get your name please: ")
-age = input("How old are you: ")
+age = int(input("How old are you (integers only please): "))
 male_female = input("What gender were you assigned at birth (male or female): ").lower()
 in_fam = input("Do any the 4 above cancers run in your family?\nIf yes, please specify which ones: " ).lower()
 smoker = input("Are you a smoker (y or n): ").lower()
@@ -21,7 +21,7 @@ def lung_cancer():
         lung_cancer_percent += 8
     else:
         pass
-    print("Your overall chance of getting lung cancer is", lung_cancer_percent, "percent.\n")
+    print("Your overall chance of getting lung cancer at some point in your life is", lung_cancer_percent, "percent.\n")
 
 #breast cancer screening code
 def breast_cancer():
@@ -57,7 +57,7 @@ def breast_cancer():
         breast_cancer_percent += 0.50
     else:
         pass
-    print("Your overall chance of getting breast cancer is", breast_cancer_percent, "percent.\n")
+    print("Your overall chance of getting breast cancer at some point in your life is", breast_cancer_percent, "percent.\n")
 
 def prostate_cancer():
     prostate_cancer_percent = 0.0
@@ -67,15 +67,15 @@ def prostate_cancer():
             prostate_cancer_percent += 12.5
         else:
             pass
+        print("Your overall chance of getting prostate cancer is", prostate_cancer_percent, "percent.\n")
     else:
-        pass
-    print("Your overall chance of getting prostate cancer is", prostate_cancer_percent, "percent.\n")
+        print("You are at no risk getting prostate cancer due to being female\n")
 
 def overall_cancer():
     lung_cancer()
     breast_cancer()
     prostate_cancer()
-    print("Lung cancer is more prevalent in people 65 or older.\nSome tips to reduce your risk are:\n- quit smoking and reduce your exposure to second hand smoke\n- eat a diet of healthy fruits and veggies\n- avoid carcinogens.\n")
-
+    print("Some general tips to reduce your chances of getting the cancers mentioned above are: \n")
+    print("Quit smoking\nReduce alcohol intake\nEat more fruits and veggies\nAvoid carcinogens\nGet regular screenings from your doctor.\n")
 overall_cancer()
 
