@@ -3,6 +3,5 @@ Software that will determine your overall risk for the 4 most common cancers bas
 This software is not intended to be a diagnostic tool and should not be used in place of a doctor. This is intended only to show if you are at a high risk or not. 
 - [x] Code I have found similar to what I am trying to accomplish is below. https://github.com/MilaBooot/Breast-Cancer-Screening-and-Detection-Using-PYQT5-GUI
 - [x] Code each individual cancer screening seperatly to ensure all are working before merging
-- [ ] set up website for project
 - [x] find tips on ways to reduce risk for each cancer and print after results
 
