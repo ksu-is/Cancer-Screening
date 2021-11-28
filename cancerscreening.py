@@ -1,7 +1,9 @@
 #cancer questionaire
 print("Hello and welcome to my Cancer Screening tool. In this tool, we will calculate your risk for getting the 4 most prevalent cancers in America:\nLung\nBreast\nProstate\nColorectal\n")
 name = input("May I get your name please: ").title()
+print("Thank you", name, "lets get started!")
 age = int(input("How old are you (integers only please): "))
+#age needs to be an integer so I converted it in the input statement
 male_female = input("What gender were you assigned at birth (male or female): ").lower()
 in_fam = input("Do any the 4 above cancers run in your family?\nIf yes, please specify which ones: " ).lower()
 smoker = input("Are you a smoker (y or n): ").lower()
@@ -86,7 +88,8 @@ def overall_cancer():
     lung_cancer()
     breast_cancer()
     prostate_cancer()
-    print("Some general tips to reduce your chances of getting the cancers mentioned above are: \n")
-    print("Quit smoking\nReduce alcohol intake\nEat more fruits and veggies\nAvoid carcinogens\nGet regular screenings from your doctor.\n")
+    colorectal_cancer()
+    print("Quit smoking\nReduce alcohol intake\nEat more fruits and veggies\nAvoid carcinogens\n")
+    print("Many of these cancers become more prevalent in older individuals. Please get regular screenings from your doctor after reaching age 50.")
 overall_cancer()
 
