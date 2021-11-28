@@ -1,6 +1,6 @@
 #cancer questionaire
 print("Hello and welcome to my Cancer Screening tool. In this tool, we will calculate your risk for getting the 4 most prevalent cancers in America:\nLung\nBreast\nProstate\nColorectal\n")
-name = input("May I get your name please: ")
+name = input("May I get your name please: ").title()
 age = int(input("How old are you (integers only please): "))
 male_female = input("What gender were you assigned at birth (male or female): ").lower()
 in_fam = input("Do any the 4 above cancers run in your family?\nIf yes, please specify which ones: " ).lower()
@@ -70,6 +70,17 @@ def prostate_cancer():
         print("Your overall chance of getting prostate cancer is", prostate_cancer_percent, "percent.\n")
     else:
         print("You are at no risk getting prostate cancer due to being female\n")
+
+def colorectal_cancer():
+    colorectal_percent = 0.0
+    if male_female == "male":
+        colorectal_percent += 4.3
+    else:
+        colorectal_percent += 4.0
+    if "colorectal" in in_fam:
+        colorectal_percent += 10
+    else:
+        pass
 
 def overall_cancer():
     lung_cancer()
