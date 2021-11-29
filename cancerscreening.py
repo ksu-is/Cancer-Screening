@@ -1,3 +1,5 @@
+#define variables
+male_female = ""
 #cancer questionaire
 print("Hello and welcome to my Cancer Screening tool. In this tool, we will calculate your risk for getting the 4 most prevalent cancers in America:\nLung\nBreast\nProstate\nColorectal\n")
 name = input("May I get your name please: ").title()
@@ -5,11 +7,32 @@ print("Thank you", name, "lets get started!")
 age = int(input("How old are you (integers only please): "))
 #age needs to be an integer so I converted it in the input statement
 male_female = input("What gender were you assigned at birth (male or female): ").lower()
+while male_female != "male" and male_female != "female":
+    print("Invalid input")
+    male_female = input("What gender were you assigned at birth (male or female): ").lower()
+
 in_fam = input("Do any the 4 above cancers run in your family?\nIf yes, please specify which ones: " ).lower()
+
 smoker = input("Are you a smoker (y or n): ").lower()
+while smoker != "y" and smoker != "n":
+    print("Invalid input")
+    smoker = input("Are you a smoker (y or n): ").lower()
+
 radon = input("Have you had constant exposure to radon (y or n) choose no if unsure: ").lower()
+while radon != "y" and radon != "n":
+    print("Invalid input")
+    radon = input("Have you had constant exposure to radon (y or n) choose no if unsure: ").lower()
+
 braca = input("Do you have the BRACA 1 or 2 gene (please enter 1, 2 or n for no): ")
+while braca != "1" and braca != "2" and braca != "n":
+    print("Invalid input")
+    braca = input("Do you have the BRACA 1 or 2 gene (please enter 1, 2 or n for no): ").lower()
+
 alcohol = input("Do you drink more than 2 alcoholic drinks a day (y or n): ").lower()
+while alcohol != "y" and alcohol != "n":
+    print("Invalid input")
+    alcohol = input("Do you drink more than 2 alcoholic drinks a day (y or n): ").lower()
+
 print("Thank you,", name, "here are your results: \n")
 
 #lung cancer screening code
@@ -81,14 +104,15 @@ def colorectal_cancer():
         colorectal_percent += 4.0
     if "colorectal" in in_fam:
         colorectal_percent += 10
-    else:
-        pass
+    print("Your overall chance of getting colorectal cancer is", colorectal_percent, "percent.\n")
+
 
 def overall_cancer():
     lung_cancer()
     breast_cancer()
     prostate_cancer()
     colorectal_cancer()
+    print("Some tips to reduce your chance of getting these cancers are:\n")
     print("Quit smoking\nReduce alcohol intake\nEat more fruits and veggies\nAvoid carcinogens\n")
     print("Many of these cancers become more prevalent in older individuals. Please get regular screenings from your doctor after reaching age 50.")
 overall_cancer()
